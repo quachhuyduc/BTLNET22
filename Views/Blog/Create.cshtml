@@ -1,0 +1,34 @@
+@{
+  string blogID = Guid.NewGuid().ToString();
+}
+<h2 style="margin-bottom: 36px">Add a Blog</h2>
+<form asp-action="Create" method="post">
+    <<div class="mb-3">
+      <label for="blog_Id">ID:</label>
+      <input type="text" class="form-control" id="blog_Id" placeholder="Enter blog ID" name="BlogId">
+    </div>
+    <div class="mb-3">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" placeholder="Enter title" name="Title">
+    </div>
+    <div class="mb-3">
+      <label for="content">Content:</label>
+      <input type="text" class="form-control" id="content" placeholder="Enter content" name="Content">
+    </div>
+    <div class="mb-3">
+      <label for="post_day">PostDay:</label>
+      <input type="text" class="form-control" id="post_day" placeholder="Enter Post day" name="PostDay">
+    </div>
+    <div class="mb-3">
+      <label for="author">Author:</label>
+      <input type="text" class="form-control" id="author" placeholder="Enter author" name="Author">
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-success" asp-action="Index">List Blogs</a>
+    </div>
+</form>
+
+   
+
+

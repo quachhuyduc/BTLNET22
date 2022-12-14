@@ -1,0 +1,44 @@
+@model ZenBlog.Models.Blog
+
+@{
+    ViewData["title"] = "Edit";
+}
+
+<h4>Update Blog information</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BlogId" />
+            <div class="form-group">
+                <label class="form-label" asp-for="Title">Title:</label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" asp-for="Content">Content:</label>
+                <input asp-for="Content" class="form-control" />
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" asp-for="PostDay">PostDay:</label>
+                <input asp-for="PostDay" class="form-control" />
+                <span asp-validation-for="PostDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-label" asp-for="Author">Author:</label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-success">List Blogs</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");};
+}

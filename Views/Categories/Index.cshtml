@@ -1,0 +1,24 @@
+@model IEnumerable<ZenBlog.Models.Categories>
+  <p>
+    <a  class="btn btn-success" asp-action="Create">Create a Category</a>
+    <a  class="btn btn-success" asp-action="Upload">Upload Category</a>
+</p>
+<table class="table table-all">
+    <tr>
+        <th>Categories ID</th>
+        <th>Categories Name</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.CategoriesId)</td>
+            <td>@Html.DisplayFor(m => item.CategoriesName)</td>
+          
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CategoriesId" class="btn btn-success">Sửa</a>
+                <a asp-action="Delete" asp-route-id="@item.CategoriesId" class="btn btn-danger">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>

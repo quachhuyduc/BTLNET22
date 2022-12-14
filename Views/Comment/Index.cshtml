@@ -1,0 +1,27 @@
+@model IEnumerable<ZenBlog.Models.Comment>
+        <a  class="btn btn-success" asp-action="Create">Create a Comment</a>
+<table class="table table-all">
+    <tr>
+        <th>CommentID</th>
+        <th>BlogID</th>
+        <th>Author</th>
+
+        <th>Content</th>
+        <th>DayComment</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.CommentId)</td>
+            <td>@Html.DisplayFor(m => item.BlogId)</td>
+            <td>@Html.DisplayFor(m => item.Author)</td>
+       
+            <td>@Html.DisplayFor(m => item.Content)</td>
+            <td>@Html.DisplayFor(m => item.DayComment)</td>
+            <td>
+             
+                <a asp-action="Delete" asp-route-id="@item.CommentId" class="btn btn-danger">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>

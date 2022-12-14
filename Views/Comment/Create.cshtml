@@ -1,0 +1,35 @@
+@{
+  string commentID = Guid.NewGuid().ToString();
+  
+}
+<h2 style="margin-bottom: 36px">Add a Comment</h2>
+<form asp-action="Create" method="post">
+    <<div class="mb-3">
+      <label for="comment_Id">Comment ID:</label>
+      <input type="text" class="form-control" id="comment_Id" placeholder="Enter comment ID" name="CommentId">
+    </div>
+    <div class="mb-3">
+      <label for="blog_Id">Blog ID:</label>
+      <input type="text" class="form-control" id="blog_Id" placeholder="Enter blog Id" name="BlogId">
+    </div>
+    <div class="mb-3">
+      <label for="author">Author:</label>
+      <input type="text" class="form-control" id="author" placeholder="Enter author" name="Author">
+    </div>
+    <div class="mb-3">
+      <label for="content">Content:</label>
+      <input type="text" class="form-control" id="content" placeholder="Enter content " name="Content">
+    </div>
+    <div class="mb-3">
+      <label for="day_comment">Day Comment:</label>
+      <input type="text" class="form-control" id="day_comment" placeholder="Enter day comment" name="Day Comment">
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-success" asp-action="Index">List Comments</a>
+    </div>
+</form>
+
+   
+
+

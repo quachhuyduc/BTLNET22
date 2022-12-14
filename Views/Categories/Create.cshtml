@@ -1,0 +1,23 @@
+@{
+  string categoriesId = Guid.NewGuid().ToString();
+}
+<h2 style="margin-bottom: 36px">Add a Categories</h2>
+<form asp-action="Create" method="post">
+    <<div class="mb-3">
+      <label for="categories_Id">Cate ID:</label>
+      <input type="text" class="form-control" id="categories_Id" placeholder="Enter cate ID" name="CategoriesId">
+    </div>
+    <div class="mb-3">
+      <label for="categories_Name">Cate Name:</label>
+      <input type="text" class="form-control" id="categories_Name" placeholder="Enter cate Name" name="CategoriesName">
+    </div>
+    
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-success" asp-action="Index">List Categories</a>
+    </div>
+</form>
+
+   
+
+

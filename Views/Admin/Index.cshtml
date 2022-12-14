@@ -1,0 +1,26 @@
+@model IEnumerable<ZenBlog.Models.Admin>
+  <p>
+    <a  class="btn btn-success" asp-action="Create">Create a Admin</a>
+
+</p>
+<table class="table table-all">
+    <tr>
+        <th>Admin ID</th>
+        <th>UserName</th>
+        <th>Password</th>
+        
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => item.AdminId)</td>
+            <td>@Html.DisplayFor(m => item.UserName)</td>
+            <td>@Html.DisplayFor(m => item.Password)</td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AdminId" class="btn btn-success">Sửa</a>
+                <a asp-action="Delete" asp-route-id="@item.AdminId" class="btn btn-danger">Xóa</a>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,27 @@
+@{
+  string adminId = Guid.NewGuid().ToString();
+}
+<h2 style="margin-bottom: 36px">Add a Admin</h2>
+<form asp-action="Create" method="post">
+    <<div class="mb-3">
+      <label for="admin_Id">Admin ID:</label>
+      <input type="text" class="form-control" id="admin_Id" placeholder="Enter admin_Id " name="AdminId">
+    </div>
+    <div class="mb-3">
+      <label for="user_Name">User Name:</label>
+      <input type="text" class="form-control" id="user_Name" placeholder="Enter user Name" name="UserName">
+    </div>
+     <div class="mb-3">
+      <label for="password">Password:</label>
+      <input type="text" class="form-control" id="password" placeholder="Enter  password" name="Password">
+    </div>
+    
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-success" asp-action="Index">List Admin</a>
+    </div>
+</form>
+
+   
+
+
